@@ -10,10 +10,10 @@ var x = 250;
 var y = 200;
 var GrenfaceSize = 150;
 var GreneyeSize = 30;
-var c = 'green' ;
+var c = 'green';
 var GreneyeOffset = 25;
 var greeting = "Hey Blu, are you cold?";
-var idea = "Lets go some place warmer"; 
+var idea = "Let's go some place warmer."; 
 
 //second character variables (Blue)
 
@@ -24,11 +24,14 @@ var BlueyeSize = 30;
 var BlueyeOffset = 25;
 var posreply = "Yes";
 
-story1 = "Two Alien friends meet on a cold planet"
+var p = 0;
+var story = p;
+var story0 = "Two Alien friends meet on a cold planet";
 function setup() {
-    createCanvas(windowWidth,600);
+    createCanvas(1100, 600);
     background('MidnightBlue '); 
     
+    //Text Conversation
     textSize(15);
     fill('PaleGreen');
     text(greeting,x+100,y-50);
@@ -36,7 +39,8 @@ function setup() {
     fill('Azure')
     text(posreply,h-120,j-10);
     text('Ok',h-110,j+50)
-    
+ /*   
+    //First Planet
     fill('LightCyan');
     rect(0, 400, width, 200);
     noStroke();
@@ -46,8 +50,20 @@ function setup() {
     noStroke();
     triangle(760, 500, 908, 120, 1150, 500);//mountain
     rect(0, 400, width, 200);
-    
-    
+   */ 
+    //Second Planet
+    fill(235, 161, 91);
+    rect(0, 0, width, height);
+    //fill(255, 188, 54, 60);
+    //rect(0, 0, width, height);
+    noStroke();
+    fill(186, 93, 6);
+    rect(0, 400, width, 200);
+    fill('Orange');
+    noStroke();
+    fill(255, 188, 54, 60);
+    //triangle(760, 500, 908, 120, 1150, 500);//mountain
+    rect(0, 400, width, 200);
     
 //Green Character
     fill(50, 186, 78);
@@ -88,4 +104,8 @@ function setup() {
     rect(580, 360, 10, 65);//left leg 
     rect(600, 360, 10, 65);//middle leg
     rect(620, 360, 10, 65);//right leg
+    
+    textSize(35);
+    textAlign(CENTER);
+    text(story0, width/2, 550);
 }
