@@ -54,16 +54,17 @@ function setup() {
     //Second Planet
     fill(235, 161, 91);
     rect(0, 0, width, height);
-    //fill(255, 188, 54, 60);
+    fill(255, 188, 54, 60);
     //rect(0, 0, width, height);
     noStroke();
     fill(186, 93, 6);
-    rect(0, 400, width, 200);
-    fill('Orange');
+    //rect(0, 400, width, 200);
+    //fill('Orange');
     noStroke();
-    fill(255, 188, 54, 60);
+    //fill(255, 188, 54, 60);
     //triangle(760, 500, 908, 120, 1150, 500);//mountain
     rect(0, 400, width, 200);
+    //ellipse(1000,1000,1020,300)
     
 //Green Character
     fill(50, 186, 78);
