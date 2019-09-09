@@ -38,6 +38,7 @@ function setup() {
     fill(50, 186, 78);
     triangle(210, 375, 258, 220, 296, 375);//body
     rect(240, 80, 15, 55);//antenna
+    ellipse(247,80, 40);//antenna top
     
     rect(230, 360, 15, 65);//left leg
     rect(270, 360, 15, 65);//right leg
@@ -56,8 +57,8 @@ function setup() {
     noStroke();
     fill(50, 186, 178);
     triangle(560, 375, 608, 220, 646, 375);//body
-    rect(580, 80, 15, 65);//antenna
-    rect(600, 80, 15, 65);//antenna
+    rect(580, 80, 15, 65);//left antenna
+    rect(600, 80, 15, 65);//right antenna
     ellipse(597,80, 40);//antenna top
     
     rect(580, 360, 15, 65);//left leg
