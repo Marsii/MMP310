@@ -10,7 +10,7 @@ var x = 250;
 var y = 200;
 var GrenfaceSize = 150;
 var GreneyeSize = 30;
-var c = 'green';
+var c = "green";
 var GreneyeOffset = 25;
 var greeting = "Hey Blu, are you cold?";
 var idea = "Let's go some place warmer."; 
@@ -39,7 +39,7 @@ function setup() {
     fill('Azure')
     text(posreply,h-120,j-10);
     text('Ok',h-110,j+50)
- /*   
+    
     //First Planet
     fill('LightCyan');
     rect(0, 400, width, 200);
@@ -50,7 +50,8 @@ function setup() {
     noStroke();
     triangle(760, 500, 908, 120, 1150, 500);//mountain
     rect(0, 400, width, 200);
-   */ 
+   
+    /*
     //Second Planet
     fill(235, 161, 91);
     rect(0, 0, width, height);
@@ -65,7 +66,7 @@ function setup() {
     //triangle(760, 500, 908, 120, 1150, 500);//mountain
     rect(0, 400, width, 200);
     //ellipse(1000,1000,1020,300)
-    
+    */
 //Green Character
     fill(50, 186, 78);
     
