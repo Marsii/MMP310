@@ -10,10 +10,11 @@ var x = 250;
 var y = 200;
 var GrenfaceSize = 150;
 var GreneyeSize = 30;
-var c = "green";
 var GreneyeOffset = 25;
 var greeting = "Hey Blu, are you cold?";
 var idea = "Let's go some place warmer."; 
+var posresp = "You're right.";
+var finalline = "Don't worry, it will be just right in a few decades.";
 
 //second character variables (Blue)
 
@@ -23,10 +24,15 @@ var BlufaceSize = 150;
 var BlueyeSize = 30;
 var BlueyeOffset = 25;
 var posreply = "Yes";
+var toohot = "It's hot here.";
+var goelsewhere = "Let's go somewhere else.";
+var stillhot = "Isn't it still kinda cold?";
 
 var p = 0;
 var story = p;
 var story0 = "Two Alien friends meet on a cold planet";
+var story1 = "It was too cold, so they went somewhere warm but found it too hot";
+var story2 = "They were too hot, so they settled on Earth.";
 function setup() {
     createCanvas(1100, 600);
     background('MidnightBlue '); 
@@ -111,3 +117,4 @@ function setup() {
     textAlign(CENTER);
     text(story0, width/2, 550);
 }
+
