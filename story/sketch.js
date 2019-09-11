@@ -47,10 +47,22 @@ function setup() {
     //set the setting 
     if(scene == "cold") {
         background('MidnightBlue');
+    /*
+    for (x =0; x , width; x += 50) {
+    rect(x, 100+random(50), 90, height - 100);
+    }
+    
+    
+    */
     }else if (scene == "hot"){
         background('Red');
     }else if (scene == "earth"){
         background('Green');
+        /*
+        for
+        
+        
+        */
     }
    
     background('MidnightBlue '); 
