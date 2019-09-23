@@ -6,6 +6,7 @@
 */
 
 //first character variables (Gren)
+
 var x = 250;
 var y = 200;
 var GrenfaceSize = 150;
@@ -28,7 +29,7 @@ var toohot = "It's hot here.";
 var goelsewhere = "Let's go somewhere else.";
 var stillhot = "Isn't it still kinda cold?";
 
-var scene = "cold"
+var scene = "hot"
 //story
 /*
 settings:cold,hot,earth
@@ -46,16 +47,14 @@ function setup() {
     
     //set the setting 
     if(scene == "cold") {
-        background('MidnightBlue');
-    /*
+        firstp();
+    }else if (scene == "hot"){
+        secondp();
+            /*
     for (x =0; x , width; x += 50) {
     rect(x, 100+random(50), 90, height - 100);
-    }
-    
-    
-    */
-    }else if (scene == "hot"){
-        background('Red');
+    }*/
+        
     }else if (scene == "earth"){
         background('Green');
         /*
@@ -64,8 +63,6 @@ function setup() {
         
         */
     }
-   
-    background('MidnightBlue '); 
     
     //Text Conversation
     textSize(15);
@@ -75,18 +72,8 @@ function setup() {
     fill('Azure')
     text(posreply,h-120,j-10);
     text('Ok',h-110,j+50)
-    
-    //First Planet
-    fill('LightCyan');
-    rect(0, 400, width, 200);
-    noStroke();
-    fill('MediumBlue');
-    triangle(660, 500, 908, 120, 1150, 500);//mountain
-    fill('LightCyan');
-    noStroke();
-    triangle(760, 500, 908, 120, 1150, 500);//mountain
-    rect(0, 400, width, 200);
    
+
     /*
     //Second Planet
     fill(235, 161, 91);
@@ -103,27 +90,25 @@ function setup() {
     rect(0, 400, width, 200);
     //ellipse(1000,1000,1020,300)
     */
-//Green Character
-    fill(50, 186, 78);
     
-    ellipse(x, y, GrenfaceSize);//face
-    fill('black');
-    stroke('white');
-    //rotate();
-    ellipse(x - GreneyeOffset, y  , GreneyeSize, 60);//left eye
-    ellipse(x + GreneyeOffset + 25, y, GreneyeSize, 60);//right eye
-    noStroke();
-    fill(50, 186, 78);
-    triangle(210, 375, 258, 220, 296, 375);//body
-    rect(240, 80, 15, 55);//antenna
-    ellipse(247,80, 40);//antenna top
-    
-    rect(230, 360, 15, 65);//left leg
-    rect(270, 360, 15, 65);//right leg
-    
-    
-    //Blue Character
-    fill(50, 186, 178);
+    //first character variables (Gren)
+    /*
+var x = 250;
+var y = 200;
+var GrenfaceSize = 150;
+var GreneyeSize = 30;
+var GreneyeOffset = 25;
+var greeting = "Hey Blu, are you cold?";
+var idea = "Let's go some place warmer."; 
+var posresp = "You're right.";
+var finalline = "Don't worry, it will be just right in a few decades.";
+*/
+    gren(250,200);
+    blu();
+}
+
+function blu(){
+fill(50, 186, 178);
     
     ellipse(h, y, BlufaceSize);//face
     fill('DimGray');
@@ -147,4 +132,52 @@ function setup() {
     textAlign(CENTER);
     text(story0, width/2, 550);
 }
-
+function gren(x,y){
+fill(50, 186, 78);
+    
+    //var x = 250;
+    //var y = 200;
+    ellipse(x, y, GrenfaceSize);//face
+    fill('black');
+    stroke('white');
+    //rotate();
+    ellipse(x - GreneyeOffset, y  , GreneyeSize, 60);//left eye
+    ellipse(x + GreneyeOffset + 25, y, GreneyeSize, 60);//right eye
+    noStroke();
+    fill(50, 186, 78);
+    triangle(210, 375, 258, 220, 296, 375);//body
+    rect(240, 80, 15, 55);//antenna
+    ellipse(247,80, 40);//antenna top
+    
+    rect(230, 360, 15, 65);//left leg
+    rect(270, 360, 15, 65);//right leg
+}
+function firstp(){
+background('MidnightBlue');
+         //First Planet
+    fill('LightCyan');
+    rect(0, 400, width, 200);
+    noStroke();
+    fill('MediumBlue');
+    triangle(660, 500, 908, 120, 1150, 500);//mountain
+    fill('LightCyan');
+    noStroke();
+    triangle(760, 500, 908, 120, 1150, 500);//mountain
+    rect(0, 400, width, 200);
+    //text("Two Alien friends meet on a cold planet");
+}
+function secondp(){
+    //Second Planet
+    fill(240, 206, 58, 200);
+    background('Red')
+    rect(0, 0, width, height);
+    noStroke();
+    fill(186, 93, 6);
+    //rect(0, 400, width, 200);
+    //fill('Orange');
+    noStroke();
+    //fill(255, 188, 54, 60);
+    //triangle(760, 500, 908, 120, 1150, 500);//mountain
+    rect(0, 400, width, 200);
+    //ellipse(1000,1000,1020,300)
+}
