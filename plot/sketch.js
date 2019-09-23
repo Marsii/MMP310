@@ -39,6 +39,7 @@ var story2 = "They were too hot, so they settled on Earth.";
 function setup() {
      createCanvas(1100, 600);
     firstp();
+   
 }
     function draw() {
         
@@ -54,6 +55,8 @@ function setup() {
     fill('Azure')
     text("Yes",h-120,j-10);
     text('Ok',h-110,j+50)
+    
+    
     }else if (key == "w"){
         secondp();
             textSize(15);
@@ -146,6 +149,16 @@ background('MidnightBlue');
     triangle(760, 500, 908, 120, 1150, 500);//mountain
     rect(0, 400, width, 200);
     //text("Two Alien friends meet on a cold planet");
+}
+function plot1(){
+    //Text Conversation
+    textSize(15);
+    fill('PaleGreen');
+    text("Hey Blu, are you cold?",x+150,y-50);
+    text("Let's go some place warmer",x + 175, y+20);
+    fill('Azure')
+    text("Yes",h-120,j-10);
+    text('Ok',h-110,j+50)
 }
 function secondp(){
     //Second Planet
