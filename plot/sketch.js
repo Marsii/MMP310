@@ -1,6 +1,6 @@
 /*
-    setting sketch
-    9-11-19
+    plot sketch
+    9-23-19
     Marshall
     mmp 310
 */
@@ -28,16 +28,20 @@ var toohot = "It's hot here.";
 var goelsewhere = "Let's go somewhere else.";
 var stillhot = "Isn't it still kinda cold?";
 
+var scene = "cold"
+//story
+/*
+settings:cold,hot,earth
+
+*/
 var p = 0;
 var story = p;
 var story0 = "Two Alien friends meet on a cold planet";
 var story1 = "It was too cold, so they went somewhere warm but found it too hot";
 var story2 = "They were too hot, so they settled on Earth.";
+
+
 function setup() {
-    createCanvas(1100, 600);
-    background('MidnightBlue '); 
-    
-    function setup() {
      createCanvas(1100, 600);
     
     //set the setting 
