@@ -39,7 +39,18 @@ var story2 = "They were too hot, so they settled on Earth.";
 function setup() {
      createCanvas(1100, 600);
     firstp();
-   
+   /*
+    function mousePressed() {
+	if (scene == "cold") {
+		scene = "hot";
+	} else if (scene == "hot") {
+		scene = "earth";
+	} else if (scene == "earth") {
+		scene = "cold";
+	}
+
+}
+*/
 }
     function draw() {
         
