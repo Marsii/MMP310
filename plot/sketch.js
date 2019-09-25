@@ -6,34 +6,27 @@
 */
 
 //first character variables (Gren)
-
 var x = 250;
 var y = 200;
-var GrenfaceSize = 150;
-var GreneyeSize = 30;
-var GreneyeOffset = 25;
-var finalline = "Don't worry, it will be just right in a few decades.";
+
+
 
 //second character variables (Blue)
 
 var h = 600;
 var j = 200;
-var BlufaceSize = 150;
-var BlueyeSize = 30;
-var BlueyeOffset = 25;
 
 
-var scene = "cold"
+
+//var scene = "cold"
 //story
 /*
 settings:cold,hot,earth
 
 */
 var p = 0;
-var story = p;
-var story0 = "Two Alien friends meet on a cold planet";
-var story1 = "It was too cold, so they went somewhere warm but found it too hot";
-var story2 = "They were too hot, so they settled on Earth.";
+var story0 = "";
+//var story2 = "They were too hot, so they settled on Earth.";
 
 
 function setup() {
@@ -58,60 +51,33 @@ function setup() {
     //set the setting 
     if(key == "a") {
         firstp();
-        //Text Conversation
-    textSize(15);
-    fill('PaleGreen');
-    text("Hey Blu, are you cold?",x+150,y-50);
-    text("Let's go some place warmer",x + 175, y+20);
-    fill('Azure')
-    text("Yes",h-120,j-10);
-    text('Ok',h-110,j+50)
     
     
     }else if (key == "w"){
         secondp();
-            textSize(15);
-    fill('PaleGreen');
-    text("You're right.",x + 125, y+20);
-    fill('Azure')
-    text("It's too hot here.",h-140,j-10);
-    text("Let's go somewhere else.",h-155,j+50)
+            
             /*
     for (x =0; x , width; x += 50) {
     rect(x, 100+random(50), 90, height - 100);
     }*/
     }else if (key == "d"){
         thirdp();
-             textSize(15);
-    fill('PaleGreen');
-    text("Don't worry, it will be just right soon.",x + 185, y+70);
-    fill('Azure')
-    text("Isn't it still kinda cold?",h-150,j+20);
     }
     
-/*    //Text Conversation
-    textSize(15);
-    fill('PaleGreen');
-    text(greeting,x+150,y-50);
-    text(idea,x + 175, y+20);
-    fill('Azure')
-    text(posreply,h-120,j-10);
-    text('Ok',h-110,j+50)
-  */ 
-    gren(250,200);
-    blu();
+    gren(250,200,150,30,25);
+    blu(600,200,150,30,25);
 }
 
-function blu(){
+function blu(h,j,faceSize,eyeSize,eyeOffset){
 fill(50, 186, 178);
     
-    ellipse(h, y, BlufaceSize);//face
+    ellipse(h, j, faceSize);//face
     fill('DimGray');
     stroke('WhiteSmoke');
     //rotate();
-    ellipse(h - BlueyeOffset - 25, j  , BlueyeSize, 60);//left eye
-    ellipse(h - 15, j - 22 , BlueyeSize, 40);//middle eye
-    ellipse(h + BlueyeOffset, j, BlueyeSize, 60);//right eye
+    ellipse(h - eyeOffset - 25, j  , eyeSize, 60);//left eye
+    ellipse(h - 15, j - 22 , eyeSize, 40);//middle eye
+    ellipse(h + eyeOffset, j, eyeSize, 60);//right eye
     noStroke();
     fill(50, 186, 178);
     triangle(560, 365, 608, 220, 650, 365);//body
@@ -123,21 +89,19 @@ fill(50, 186, 178);
     rect(600, 360, 10, 65);//middle leg
     rect(620, 360, 10, 65);//right leg
     
-    textSize(35);
-    textAlign(CENTER);
-    text(story0, width/2, 550);
+    //textSize(35);
+    //textAlign(CENTER);
+    //text(story0, width/2, 550);
 }
-function gren(x,y){
+function gren(x,y,faceSize,eyeSize,eyeOffset){
 fill(50, 186, 78);
-    
-    //var x = 250;
-    //var y = 200;
-    ellipse(x, y, GrenfaceSize);//face
+
+    ellipse(x, y, faceSize);//face
     fill('black');
     stroke('white');
     //rotate();
-    ellipse(x - GreneyeOffset, y  , GreneyeSize, 60);//left eye
-    ellipse(x + GreneyeOffset + 25, y, GreneyeSize, 60);//right eye
+    ellipse(x - eyeOffset, y  , eyeSize, 60);//left eye
+    ellipse(x + eyeOffset + 25, y, eyeSize, 60);//right eye
     noStroke();
     fill(50, 186, 78);
     triangle(210, 375, 258, 220, 296, 375);//body
@@ -159,20 +123,25 @@ background('MidnightBlue');
     noStroke();
     triangle(760, 500, 908, 120, 1150, 500);//mountain
     rect(0, 400, width, 200);
+    plot1();
     //text("Two Alien friends meet on a cold planet");
 }
 function plot1(){
     //Text Conversation
     textSize(15);
     fill('PaleGreen');
-    text("Hey Blu, are you cold?",x+150,y-50);
-    text("Let's go some place warmer",x + 175, y+20);
+    text("Hey Blu, are you cold?",280,y-50);
+    text("Let's go some place warmer",280, y+20);
     fill('Azure')
     text("Yes",h-120,j-10);
     text('Ok',h-110,j+50)
+    textSize(30);
+    fill('black')
+    text("Two Alien friends meet on a cold planet",width/2,500);
 }
 function secondp(){
     //Second Planet
+    
     fill(240, 206, 58, 200);
     background('Red')
     rect(0, 0, width, height);
@@ -184,7 +153,20 @@ function secondp(){
     //fill(255, 188, 54, 60);
     //triangle(760, 500, 908, 120, 1150, 500);//mountain
     rect(0, 400, width, 200);
+    plot2();
     //ellipse(1000,1000,1020,300)
+}
+function plot2(){
+    //Text Conversation
+    textSize(15);
+    fill('PaleGreen');
+    text("You're right.",x + 125, y+20);
+    fill('Azure');
+    text("It's too hot here.",h-140,j-10);
+    text("Let's go somewhere else.",h-155,j+50);
+    textSize(30);
+    fill('black');
+    text("It was too cold, so they went somewhere warm but found it too hot",width/2,500);
 }
 function thirdp(){
     background(122, 222, 214);
@@ -193,4 +175,15 @@ function thirdp(){
     noStroke();
     rect(0, 400, width, 200);
     //ellipse(1000,1000,1020,300)
+    plot3();
+}
+function plot3(){
+    textSize(15);
+    fill('PaleGreen');
+    text("Don't worry, it will be just right soon.",x + 185, y+70);
+    fill('Azure');
+    text("Isn't it still kinda cold?",h-150,j+20);
+    textSize(30);
+    fill('black');
+    text("They were too hot, so they settled on Earth to wait for it to be just right.",width/2,500);
 }
