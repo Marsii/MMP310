@@ -16,10 +16,67 @@ settings:cold,hot,earth
 function setup() {
     createCanvas(1100, 600);
     background('black');
-    fill('white');
-    textSize(30);
-    text("press a to start",width/2,500);
-   /*
+    
+    
+    	/*for (let x = -10; x < 1100; x += 10) {
+		fill(255);
+        noStroke();
+		triangle(x, 600, x+10, 520, x+20, 600);
+		fill(0);
+		text(x, x, height/2);
+	}*//*
+    
+    for (let x = 100; x < 600; x += 100) {
+		fill(255);
+		ellipse(x, height/2, 100);
+		
+	}*/
+	/*
+	var w = 100;
+	var h = height/2;
+//	var s = x / 4;
+	
+	for (let i = 0; i < 5; i++) {
+		
+		var s = w / 4;
+		var b = map(w, 0, width, 0, 255);
+		
+		fill(100, 100, b);
+		ellipse(w, h, s); // face
+		ellipse(w + 20, h - 20, 10); // right eye
+		ellipse(w - 20, h - 20, 10); // left eye
+		rectMode(CENTER);
+		rect(w, h + 20, 40, 10, 10); // mouth
+		x += 100
+	}*/
+}
+    
+    
+    
+    
+    //fill('white');
+    //'textSize(30);
+    //text("press a to start",width/2,500);
+    
+    //keeps track of ellipse placement
+    /*
+    for(var x = 100; x < 1000; x+=1000) {
+    //fill(255);
+    ellipse(x,600/2,100);
+        
+    //fill(0);
+    text(x,x, height/2)
+    }
+    //keeps track of amount of ellipses
+    for(let i = 0; i < 5; i++){
+        fill(255);
+        ellipse(x,600/2,100);
+        console.log(i);
+        
+        fill(0);
+        text(i,x, height/2)
+    }*/
+   /* not working with sketch
     function mousePressed() {
 	if (scene == "cold") {
 		scene = "hot";
@@ -31,7 +88,7 @@ function setup() {
 
 }
 */
-}
+//}
     function draw() {
 
     if(key == "a") {
@@ -48,8 +105,14 @@ function setup() {
     }*/
     }else if (key == "d"){
         thirdp();
+        for (let x = -10; x < 1100; x += 10) {
+		fill(83, 163, 39);
+        noStroke();
+		triangle(x, 400, x+10, 360, x+20, 400);}
     gren(250,200,150,30,25);
     blu(600,200,150,30,25);
+        
+        
     }
     
     
@@ -154,7 +217,7 @@ function plot2(){
 function thirdp(){
     background(122, 222, 214);
     noStroke();
-    fill(47, 173, 9);
+    fill(83, 163, 39);
     noStroke();
     rect(0, 400, width, 200);
     //ellipse(1000,1000,1020,300)
