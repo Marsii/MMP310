@@ -43,7 +43,7 @@ function draw(){
     //set the setting 
     if(key === "a" ) {
         background('MidnightBlue');
-    //First Planet
+    //First Planet (cold planet)
     fill('LightCyan');
     rect(0, 400, width, 200);
     noStroke();
@@ -62,7 +62,7 @@ function draw(){
     */
     }else if (key === "w"){
         background('Red');
-    //Second Planet
+    //Second Planet (hot planet)
     fill(235, 161, 91);
     rect(0, 0, width, height);
     fill(255, 188, 54, 60);
@@ -77,15 +77,18 @@ function draw(){
     rect(0, 400, width, 200);
     //ellipse(1000,1000,1020,300)
     }else if (key === "d"){
-        background('Green');
+        //Earth
+        background('LightBlue');
+        fill('green')
+        rect(0, 400, width, 200)
         /*
         for
         
         
         */
     }
+
 }
-    
     //Text Conversation
     textSize(15);
     fill('PaleGreen');
@@ -139,5 +142,5 @@ function draw(){
     textAlign(CENTER);
     text(story0, width/2, 550);
 
-}
+
 
