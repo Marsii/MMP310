@@ -1,6 +1,7 @@
 /*
     I have 2 1/2 patterns in here
 */
+/*
 function setup() {
     createCanvas(1100, 600);
     background('black');
@@ -9,16 +10,7 @@ function setup() {
    function draw(){
     //drawPattern();
 }
-    /*
-    for (let x = 0; x < width; x += 100){
-     ellipse(x, height/2, 100)//face
-        var r = random(0);
-		var g = random(255);
-		var b = random(60);
-        
-		fill(r, g, b);
-    }
-    */
+
 function drawPattern(){
         for (let x = -30; x < width; x += 75){
         for (let y = -20; y < height; y += random(15,50)) {
@@ -38,7 +30,7 @@ function drawPattern(){
     }
     }
 }
-
+*/
     	/*
         
         function setup() {
@@ -79,7 +71,7 @@ function pattern() {
   pop();
 
 }*/
-/*
+
   
 
 function setup() {
@@ -122,4 +114,4 @@ function pattern() {
   pop();
 
 }
-*/
+
