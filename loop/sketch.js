@@ -16,8 +16,34 @@ settings:cold,hot,earth
 function setup() {
     createCanvas(1100, 600);
     background('black');
+    textSize(25);
+    text("press a to start", 100, 50);
     
-    
+    /*
+    for (let x = 0; x < width; x += 100){
+     ellipse(x, height/2, 100)//face
+        var r = random(0);
+		var g = random(255);
+		var b = random(60);
+        
+		fill(r, g, b);
+    }
+    */
+   /*
+        for (let x = 0; x < width; x += 100){
+        for (let y = 0; y < height; y += 25) {
+
+     ellipse(x, y, random(2,50))//face
+        
+        
+		
+        var r = random(100);
+		var g = random(255);
+		var b = random(60);
+        fill(r, g, b);
+    }
+    }
+    */
     	/*for (let x = -10; x < 1100; x += 10) {
 		fill(255);
         noStroke();
@@ -93,12 +119,12 @@ function setup() {
 
     if(key == "a") {
         firstp();
-    gren(250,200,150,30,25);
-    blu(600,200,150,30,25);
+    gren(250,200,150,30,25,0,0);
+    blu(600,200,150,30,25,0,0);
     }else if (key == "w"){
         secondp();
-    gren(250,200,150,30,25);
-    blu(600,200,150,30,25);
+    gren(250,200,150,30,25,0,0);
+    blu(600,200,150,30,25,0,0);
             /*
     for (x =0; x , width; x += 50) {
     rect(x, 100+random(50), 90, height - 100);
@@ -109,8 +135,8 @@ function setup() {
 		fill(83, 163, 39);
         noStroke();
 		triangle(x, 400, x+10, 360, x+20, 400);}
-    gren(250,200,150,30,25);
-    blu(600,200,150,30,25);
+    gren(250,200,150,30,25,0,0);
+    blu(600,200,150,30,25,0,0);
         
         
     }
@@ -118,7 +144,7 @@ function setup() {
     
 }
 
-function blu(h,j,faceSize,eyeSize,eyeOffset){
+function blu(h,j,faceSize,eyeSize,eyeOffset,xbody,ybody){
 fill(50, 186, 178);
     
     ellipse(h, j, faceSize);//face
@@ -130,16 +156,16 @@ fill(50, 186, 178);
     ellipse(h + eyeOffset, j, eyeSize, 60);//right eye
     noStroke();
     fill(50, 186, 178);
-    triangle(560, 365, 608, 220, 650, 365);//body
-    rect(580, 80, 15, 65);//left antenna
-    rect(600, 80, 15, 65);//right antenna
-    ellipse(597 ,80, 40);//antenna top
+    triangle(560 + xbody, 365 + ybody, 608 + xbody, 220 + ybody, 650 + xbody, 365 + ybody);//body
+    rect(580 + xbody, 80 + ybody, 15, 65);//left antenna
+    rect(600 + xbody, 80 + ybody, 15, 65);//right antenna
+    ellipse(597 + xbody ,80, 40);//antenna top
     
-    rect(580, 360, 10, 65);//left leg 
-    rect(600, 360, 10, 65);//middle leg
-    rect(620, 360, 10, 65);//right leg
+    rect(580 + xbody, 360 + ybody, 10, 65);//left leg 
+    rect(600 + xbody, 360 + ybody, 10, 65);//middle leg
+    rect(620 + xbody, 360 + ybody, 10, 65);//right leg
 }
-function gren(x,y,faceSize,eyeSize,eyeOffset){
+function gren(x,y,faceSize,eyeSize,eyeOffset,xbody,ybody){
 fill(50, 186, 78);
 
     ellipse(x, y, faceSize);//face
@@ -150,12 +176,12 @@ fill(50, 186, 78);
     ellipse(x + eyeOffset + 25, y, eyeSize, 60);//right eye
     noStroke();
     fill(50, 186, 78);
-    triangle(210, 375, 258, 220, 296, 375);//body
-    rect(240, 80, 15, 55);//antenna
-    ellipse(247,80, 40);//antenna top
+    triangle(210 + xbody, 375 + ybody, 258 + xbody, 220 + ybody, 296 + xbody, 375 + ybody);//body
+    rect(240 + xbody, 80 + ybody, 15, 55);//antenna
+    ellipse(247+ xbody,80 + ybody, 40);//antenna top
     
-    rect(230, 360, 15, 65);//left leg
-    rect(270, 360, 15, 65);//right leg
+    rect(230+ xbody, 360 + ybody, 15, 65);//left leg
+    rect(270+ xbody, 360 + ybody, 15, 65);//right leg
 }
 function firstp(){
 background('MidnightBlue');
