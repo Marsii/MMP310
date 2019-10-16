@@ -29,13 +29,18 @@ function getNum() {
 
 }
 
+function saveImage() {
+        save(nameInput.value() + ".png");
+}
+
 function pattern() {
     background('plum');
     noStroke();
     fill('lightblue');
-   // for (let i = 0; i < num; i++){
-   // ellipse(random(width), random(height), random(50,100));
-   // }
+    
+   for (let i = 0; i < num; i++){
+   ellipse(random(width), random(height), random(50,100));
+   }
     //for(let x = 0; x < width; x += 100){
     //ellipse( x, random(height), random(50,100));
     //}
