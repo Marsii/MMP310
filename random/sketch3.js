@@ -1,5 +1,5 @@
 /*
-    I have 2 1/2 patterns in here
+    Third pattern, triangles arranged 
 */
 
 

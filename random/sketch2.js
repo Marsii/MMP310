@@ -13,7 +13,7 @@ function draw(){
 }*/
 
 function createPattern() {
-    
+    var d = random(-150,150)
     translate(random(375, 425), random(375, 425));
     stroke(0, 0, 0, 150);
     strokeWeight(1);
@@ -38,7 +38,7 @@ function createPattern() {
   stroke(0, 0, 0, 140);
   square(s, 20, 55);
   square(30, s, 55+t, 20);
-  ellipse(0, 200, 300, 150);// main circle
+  ellipse(0, 200, 300, 150+d);// main circle
   triangle(30, 75, 58, 20, 86, 75);
   triangle(43, 32, 15, 32, 29, 10);
   }
