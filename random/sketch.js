@@ -2,12 +2,13 @@
     First pattern, triangles
 */
 function setup() {
-    createCanvas(1100, 600);
+    createCanvas(800, 800);
     background('black');
     drawPattern();
 }
-function draw() {
-      //drawPattern();
+function mouseClicked(){
+    background('black');
+      drawPattern();
 }
 
 function drawPattern() {
