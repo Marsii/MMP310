@@ -41,4 +41,41 @@ function drawPattern(){
     }
 }
 
+/*
+        function setup() {
+  createCanvas(600, 600);
+  background(172, 141, 186);
+  pattern()
+  
+}
+function pattern() {
+  //background(172, 141, 186); 
+  //background(mouseY, 141, 186);
+  push();
 
+ 
+ 
+  translate(300, 300);
+
+  
+  stroke(0, 0, 0);
+  strokeWeight(1);
+  
+  for (let x = 0; x < 40; x += 1){
+    var r = random(200);
+    var g = random(200);
+    var b = random(200);
+ 
+		fill(r, g, b,15);
+     ellipse(x, height/2, 100)//face
+      
+
+    
+  rotate(1*PI/19);
+  ellipse(0, 200, 300, 150);
+  }
+  
+  
+  pop();
+
+}*/
