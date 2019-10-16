@@ -1,23 +1,26 @@
 /*
-    I have 2 1/2 patterns in here
+    Nice Circular Pattern
 */
 
 function setup() {
     createCanvas(800, 800);
     background(172 + random(55), 141 + random(55), 186 + random(55));
+    translate(400, 400);
     createPattern();
 }
 
 function mouseClicked(){
  clear();
+ 
+ background(172 + random(55), 141 + random(55), 186 + random(55));
  createPattern();
     
 }
 
 function createPattern() {
-    translate(0,0)
+    //translate(0,0);
     var d = random(-100,100)
-    translate(random(375, 425), random(375, 425));
+    //translate(400, 400);
     stroke(0, 0, 0, 150);
     strokeWeight(1);
     var s = random(200, 400);
