@@ -16,7 +16,7 @@ function setup() {
     var saveButton = createButton("Save Image");
     saveButton.mouseClicked(saveImage);
     
-    createP("Change Pattern")
+    createP("Change Pattern");
     var numSlider = createSlider(2, 100, num);
     numSlider.input(getNum);
     
