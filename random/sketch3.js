@@ -8,40 +8,41 @@ function setup() {
     background('gray');
     translate(550, 300);
     drawPattern();
-    
+
 }
-function mouseClicked(){
-     background('gray');
+
+function mouseClicked() {
+    background('gray');
     drawPattern();
 }
 
-function drawPattern(){
-        
-    
-    for (let x = -30; x < width; x += 75){
-         rotate(15*PI/30);
+function drawPattern() {
+
+
+    for (let x = -30; x < width; x += 75) {
+        rotate(15 * PI / 30);
         for (let y = -20; y < height; y += 30) {
-           rotate(1*PI/random(15,25));
-        var r = random(150);
-        var g = random(225);
-        var b = random(200);
-            
-        fill(r, g, b,110);
-        stroke(1);
-        
-       //triangle(30+x, 75, 58+x, 20, 86+x, 75);
-        ellipse( x , 20+y, random(5,25));  
-       
-        triangle(30, 75+y, 58, 20+y, 86, 75+y);
-        ellipse(20 , y, random(5,25)); 
-        
-     //strokeWeight(random(3));
-    // line(5+x, 20+y, 85+x, 75+y); 
-     //line(85+x, 20+y, 5+x, 75+y); 
-		//translate(550+x, 300+y);
-            
-       
-    }
+            rotate(1 * PI / random(15, 25));
+            var r = random(150);
+            var g = random(225);
+            var b = random(200);
+
+            fill(r, g, b, 110);
+            stroke(1);
+
+            //triangle(30+x, 75, 58+x, 20, 86+x, 75);
+            ellipse(x, 20 + y, random(5, 25));
+
+            triangle(30, 75 + y, 58, 20 + y, 86, 75 + y);
+            ellipse(20, y, random(5, 25));
+
+            //strokeWeight(random(3));
+            // line(5+x, 20+y, 85+x, 75+y); 
+            //line(85+x, 20+y, 5+x, 75+y); 
+            //translate(550+x, 300+y);
+
+
+        }
     }
 }
 

@@ -17,23 +17,23 @@ function setup() {
     var button = createButton("Generate Pattern");
     button.mouseClicked(pattern);
      
-    createPx("Change Pattern");
+    createP("Change Pattern");
     var numSlider = createSlider(1, 20, numX);
     numSlider.input(getNumX);
     
-    createPy("Change Pattern");
+    createP("Change Pattern");
     var numSlider = createSlider(2, 100, numY);
     numSlider.input(getNumY);
     
-    createR("Change Redness");
+    createP("Change Redness");
     var numSlider = createSlider(10, 215, redColor);
     numSlider.input(getRed);
     
-    createG("Change Greenness");
+    createP("Change Greenness");
     var numSlider = createSlider(10, 215, greenColor);
     numSlider.input(getGreen);
     
-    createB("Change Blueness");
+    createP("Change Blueness");
     var numSlider = createSlider(10, 215, blueColor);
     numSlider.input(getBlue);
     //nameInput = createInput("Name the file");
