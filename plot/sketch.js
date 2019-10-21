@@ -38,6 +38,7 @@ function setup() {
         firstp();
     gren(250,200,150,30,25);
     blu(600,200,150,30,25);
+   
     }else if (key == "w"){
         secondp();
     gren(250,200,150,30,25);
@@ -121,6 +122,8 @@ function plot1(){
     textSize(30);
     fill('black')
     text("Two Alien friends meet on a cold planet",width/4,500);
+    textSize(15);
+    text("press w to continue",800,550);
 }
 function secondp(){
     //Second Planet
@@ -150,6 +153,8 @@ function plot2(){
     textSize(30);
     fill('black');
     text("It was too cold, so they went somewhere warm but found it too hot",150,500);
+    textSize(15);
+    text("press d to continue",800,550);
 }
 function thirdp(){
     background(122, 222, 214);
