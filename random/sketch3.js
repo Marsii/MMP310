@@ -1,5 +1,5 @@
 /*
-    Third pattern, triangles arranged 
+    Third pattern, triangles arranged. No longer used on random page. Adapted for pattern assignment.
 */
 
 
