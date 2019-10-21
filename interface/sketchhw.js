@@ -8,7 +8,7 @@ var redColor = 150;
 var greenColor = 150;
 var blueColor = 150;
 var rotation = 2;
-var alpha = 50;
+var a = 50;
 
 function setup() {
     createCanvas(windowWidth, 600);
@@ -19,28 +19,28 @@ function setup() {
     button.mouseClicked(pattern);
 
     createP("Change Number of Rows");
-    var numSlider = createSlider(2, 100, numX);
+    var numSlider = createSlider(2, 80, numX);
     numSlider.input(getNumX);
 
     createP("Change Redness");
-    var numSlider = createSlider(10, 235, redColor);
-    numSlider.input(getRed);
+    var redSlider = createSlider(10, 235, redColor);
+    redSlider.input(getRed);
 
     createP("Change Greenness");
-    var numSlider = createSlider(10, 235, greenColor);
-    numSlider.input(getGreen);
+    var greenSlider = createSlider(10, 235, greenColor);
+    greenSlider.input(getGreen);
 
     createP("Change Blueness");
-    var numSlider = createSlider(10, 235, blueColor);
-    numSlider.input(getBlue);
+    var blueSlider = createSlider(10, 235, blueColor);
+    blueSlider.input(getBlue);
 
     createP("Change Rotation");
-    var numSlider = createSlider(1, 15, rotation);
-    numSlider.input(turn);
+    var turnSlider = createSlider(1, 15, rotation);
+    turnSlider.input(turn);
 
     createP("Change Opacity");
-    var numSlider = createSlider(1, 235, alpha);
-    numSlider.input(opacity);
+    var alphSlider = createSlider(1, 235, a);
+    alphSlider.input(opacity);
 }
 
 function getNumX() {
@@ -70,23 +70,23 @@ function turn() {
 }
 
 function opacity() {
-    alpha = this.value();
+    a = this.value();
     pattern();
 }
 
 function pattern() {
-    background(0, 200);
+    background(0);
     noStroke();
 
     for (let x = 0; x < numX; x++) {
         rotate(15 * PI / 30);
-        for (let y = 0; y < height; y += 75) {
+        for (let y = 0; y < 500; y += 50) {
             rotate(rotation * PI / random(15, 25));
             var r = redColor + random(-30, 30);
             var g = greenColor + random(-30, 30);
             var b = blueColor + random(-30, 30);
-
-            fill(r, g, b, alpha); // color of triangle and ellipses
+            
+            fill(r, g, b, a); // color of triangle and ellipses
             stroke(1);
 
             //triangle(30+x, 75, 58+x, 20, 86+x, 75);

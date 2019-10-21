@@ -2,7 +2,7 @@
     interface
     10-16-19
 */
-var eyeNum = 3;
+var eyeNum = 1;
 var nameInput;
 
 var r = 194;
@@ -33,7 +33,7 @@ function setup() {
     blueSlider.input(updateBlue);
 
     createP("Eye Number");
-    var eyeSlider = createSlider(1, 50, eyeNum);
+    var eyeSlider = createSlider(1, 10, eyeNum);
     eyeSlider.input(geteyeNum);
     
     createP("Eye Color");
@@ -78,9 +78,18 @@ function character() {
     triangle(width/2 + xbody, 465, width/2, 220, width/2 - xbody, 465);
     ellipse(width / 2, height / 3, 200, ); // face
     stroke("purple");
+    
+    var max = 100;
+    var eyeWidth = 30;
+    if (eyeWidth * 1.5 * eyeNum > max) {
+        eyeWidth = max / eyeNum;
+    }
+    var eyeX = eyeWidth * 1.5;
+    var start = width/2 - eyeWidth * (eyeNum-1) / 1.5;
+    
     for (let i = 0; i < eyeNum; i++) {
         fill(eyeColor);
-        ellipse(width/2+random(-80,80), height / 3, 30, 60);
+        ellipse(start + i * eyeX, height / 3, eyeWidth, 60);
     }
    
     //ellipse(width/2, height/3, eyeSize, 40);//eyes
