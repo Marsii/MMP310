@@ -62,7 +62,7 @@ function turn() {
 
 
 function pattern() {
-    background(190,175);
+    background(190,205);
     noStroke();
     
     for (let x = 0; x < numX; x ++){
@@ -73,7 +73,7 @@ function pattern() {
         var g = greenColor + random(-30,30);
         var b = blueColor + random(-30,30);
             
-        fill(r, g, b, 110); // color of triangle and ellipses
+        fill(r, g, b, 150); // color of triangle and ellipses
         stroke(1);
         
        //triangle(30+x, 75, 58+x, 20, 86+x, 75);
