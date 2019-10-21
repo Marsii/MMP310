@@ -4,10 +4,11 @@
 var numX = 10;
 var nameInput;
 
-var redColor = 50;
-var greenColor = 50;
-var blueColor = 50;
+var redColor = 150;
+var greenColor = 150;
+var blueColor = 150;
 var rotation = 2;
+var alpha = 50;
 
 function setup() {
     createCanvas(windowWidth, 600);
@@ -36,6 +37,10 @@ function setup() {
     createP("Change Rotation");
     var numSlider = createSlider(1, 15, rotation);
     numSlider.input(turn);
+
+    createP("Change Opacity");
+    var numSlider = createSlider(1, 235, alpha);
+    numSlider.input(opacity);
 }
 
 function getNumX() {
@@ -64,9 +69,13 @@ function turn() {
     pattern();
 }
 
+function opacity() {
+    alpha = this.value();
+    pattern();
+}
 
 function pattern() {
-    background(0,200);
+    background(0, 200);
     noStroke();
 
     for (let x = 0; x < numX; x++) {
@@ -77,7 +86,7 @@ function pattern() {
             var g = greenColor + random(-30, 30);
             var b = blueColor + random(-30, 30);
 
-            fill(r, g, b, 150); // color of triangle and ellipses
+            fill(r, g, b, alpha); // color of triangle and ellipses
             stroke(1);
 
             //triangle(30+x, 75, 58+x, 20, 86+x, 75);
