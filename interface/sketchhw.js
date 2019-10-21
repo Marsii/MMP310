@@ -66,7 +66,7 @@ function turn() {
 
 
 function pattern() {
-    background(190, 205);
+    background(0,200);
     noStroke();
 
     for (let x = 0; x < numX; x++) {
