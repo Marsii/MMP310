@@ -2,7 +2,7 @@ function setup() {
     createCanvas(800, 800);
     //background('black');
     //alien(600, 200, 150, 0, 0);
-    gren(200,250,150);
+    gren(250,200,150);
     //semi-working but flawed
     //gren(250, 200, 150);
 
@@ -47,10 +47,10 @@ function gren(x, y, size) {
     triangle(x-x/5, y*1.875, x, y, x+x/5, y*1.875); //body
     strokeWeight(size/15);
     stroke('plum');
-    line(x, y/2, x, y);
+    line(x, y/2.5, x, y);
     //rect(x - 8, y/2.5, size/10, size/3); //antenna
     noStroke();
-    ellipse(x, y/2, size/3); //antenna top
+    ellipse(x, y/2.5, size/3); //antenna top
 
     rect(x/1.15, y*1.8, size/10, size/3); //left leg
     rect(x/.95, y*1.8, size/10, size/3); //right leg
