@@ -85,7 +85,7 @@ function pattern() {
             var r = redColor + random(-30, 30);
             var g = greenColor + random(-30, 30);
             var b = blueColor + random(-30, 30);
-            
+
             fill(r, g, b, a); // color of triangle and ellipses
             stroke(1);
 
