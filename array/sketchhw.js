@@ -1,6 +1,6 @@
 var sizes = [30, 40, 50, 60, 70, 80, 30];
-var yposition = [30, 40, -10, 20, -20, 0, 10];
-var speed = [1, 3, 2, 5, 4, 2, 1.5];
+var yposition = [730, 40, 410, 20, 520, 0, 620];
+var speed = [-1, 3, -2, 5, -4, 2, -1.5];
 var xposition = [1, 3, 2, 5, 4, 2, 1.5];
 
 function setup() {
