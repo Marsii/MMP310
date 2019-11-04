@@ -1,11 +1,12 @@
 class Thing {
-	constructor(x, y, size, speedX, speedY,rn) {
+	constructor(x, y, size, speedX, speedY,rn, cr) {
 		this.x = x;
 		this.y = y;
 		this.size = size;
 		this.speedX = speedX;
 		this.speedY = speedY;
         this.rn = rn;
+        this.cr = cr;
 	}
 		
 	update() {
